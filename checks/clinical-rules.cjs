@@ -1,0 +1,13 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');global.window=global;for(const f of ['exercise-library.js','clinical.js'])vm.runInThisContext(fs.readFileSync(__dirname+'/../docs/'+f,'utf8'));
+const date='2026-10-29',screen={date,red:false,fall:false,restrict:false},d={pain:0,fatigue:0},base={name:'Örnek',age:75,diagnosisStatus:'selected',diagnoses:['oa'],level:'moderate',goal:'Sandalyeden daha kolay kalkmak',clearance:true,stability:'stable',supervision:true,rehabReviewed:true};
+const run=(p={},s=screen,sym=d)=>buildClinicalPlan({...base,...p},s,sym,date);
+assert.equal(EXERCISE_LIBRARY.length,30);assert.equal(new Set(EXERCISE_LIBRARY.map(e=>e.id)).size,30);
+for(const e of EXERCISE_LIBRARY)for(const id of e.sources)assert(CLINICAL_SOURCES[id],'Unknown source: '+id);
+assert.equal(run().locks.length,0);assert(run({}, {...screen,red:true}).locks.length>0);assert(run({}, {...screen,date:'2026-10-28'}).locks.length>0);assert(run({},screen,{pain:8,fatigue:0}).locks.length>0);assert(run({},screen,{pain:0,fatigue:0,breathlessness:8}).locks.length>0);
+assert(run({diagnoses:['oa','diabetes'],footUlcer:true}).locks.length>0);assert(run({diagnoses:['oa','diabetes'],footUlcer:true}).chosen.every(e=>e.position==='seated'));
+assert(run({diagnoses:['osteoporosis'],fragilityFracture:true,rehabReviewed:false}).locks.length>0);
+assert(run({diagnoses:['stroke','parkinson']}).chosen.every(e=>e.conditions.includes('stroke')));assert(run({diagnoses:['stroke'],supervision:false}).locks.length>0);
+for(const id of ['cardiac','copd','parkinson','stroke'])assert(run({diagnoses:[id],rehabReviewed:false}).locks.length>0);
+assert(run({level:'low'}).chosen.every(e=>e.position==='seated'));assert(run({supervision:false}).chosen.every(e=>!e.supervised));assert(run({fallsHistory:true,fallsReviewed:false}).locks.length>0);assert(run({diagnosisStatus:'unknown'}).locks.length>0);assert(run({diagnoses:['other']}).locks.length>0);
+assert(run({},screen,{pain:4,fatigue:0}).chosen.every(e=>e.position==='seated'));assert.notDeepEqual(run({diagnoses:['oa']}).chosen.map(e=>e.id),run({diagnoses:['copd']}).chosen.map(e=>e.id));
+console.log('Clinical rule checks passed: library metadata, multi-diagnosis restrictions, screening, symptom blocks, supervision and personalization.');

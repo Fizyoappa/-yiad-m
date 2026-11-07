@@ -1,0 +1,32 @@
+{
+  "id": "./",
+  "name": "İyiAdım — Günlük sağlık yol arkadaşın",
+  "short_name": "İyiAdım",
+  "description": "Kişisel sağlık takibi ve güvenli hareket için eğitim uygulaması.",
+  "lang": "tr",
+  "start_url": "./#today",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f3",
+  "theme_color": "#246851",
+  "icons": [
+    {
+      "src": "icons/icon192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

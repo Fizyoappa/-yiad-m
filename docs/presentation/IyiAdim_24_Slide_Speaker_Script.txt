@@ -1,0 +1,280 @@
+İyiAdım — Revised English Speaker Script
+24 slides | 1877 spoken words | approximately 16–19 minutes including a short demo
+Prepared: 11 November 2026
+Live app: https://fizyoappa.github.io/-yiad-m/
+
+PRESENTER NOTES — NOT SPOKEN
+Read the slide paragraphs aloud. Screen cues are actions, not spoken lines.
+Rehearse the demo with a fictional guest profile. Never use real patient information.
+The appendices are reference material for questions and slide preparation.
+
+SLIDE 1 — İyiAdım: A Mobile Web App Prototype for Older Adults
+
+Good morning everyone. Today, we are presenting İyiAdım, a mobile web app prototype developed for our geriatric rehabilitation project.
+
+We designed it to bring exercise guidance, daily health records and user support into one accessible place. Our central question was how to organise exercise around an older adult’s goals, abilities and safety needs.
+
+We will explain the user journey, the reasoning behind our decisions, and what still needs evaluation before clinical use.
+
+SLIDE 2 — Planning Exercise at Home
+
+Two people of the same age may need very different exercise programmes. One may have difficulty rising from a chair. Another may walk independently but need support with balance. Their diagnoses alone do not explain all these differences.
+
+This led us to organise the app around three questions: What does the person want to do more easily? What can they currently do? And what might make exercise inappropriate today? Those questions shaped the profile, safety check and exercise selection.
+
+SLIDE 3 — How the App Works
+
+The user journey has four steps: profile, safety check, exercise options and follow-up.
+
+First, users record their existing diagnoses, movement level and functional goals. They then complete the day’s safety check. The app uses these answers to organise a starting selection and explain its approach.
+
+Users can open exercise instructions, record what they completed and review their records over time. The aim is to make each stage understandable, including what to do when the programme should not continue.
+
+SLIDE 4 — Health Profile
+
+The profile includes conditions commonly encountered in geriatric rehabilitation: osteoarthritis, osteoporosis, Parkinson’s disease, a history of stroke, type 2 diabetes, hypertension, stable heart disease, COPD and frailty. Users select conditions already diagnosed by a professional; the app does not diagnose them.
+
+Multiple selections are allowed. We also ask about movement level, supervision, falls, fractures and other restrictions. Diabetes brings additional questions about foot wounds and complications.
+
+We included these details because a diagnosis label alone cannot establish whether a particular activity is suitable.
+
+SLIDE 5 — Daily Safety Check
+
+Safety is checked before exercise each day because a person’s condition can change.
+
+If users report new chest pain, severe breathlessness at rest, fainting or sudden neurological symptoms, exercise completion is blocked and an urgent message directs them to 112 in Türkiye. New injuries, worsening symptoms and reported professional restrictions can also block the plan.
+
+We explain the reason for the restriction and the need for assessment. This supports recognition of reported warning signs; it is not an emergency diagnostic system.
+
+SLIDE 6 — When Symptoms Change the Plan
+
+Pain, fatigue and breathlessness can also change the available options. A recorded score of four or above leads to fewer seated options. At seven or above, exercise completion is blocked.
+
+We chose these rules as conservative safeguards for the prototype. They are not clinically validated cutoffs, and we do not present them as universal rehabilitation thresholds.
+
+The important design principle is that symptom changes affect the workflow. The specific rules require professional review before patient use.
+
+SLIDE 7 — How the App Picks Exercises
+
+Selection follows a clear order: safety restrictions first, then movement level and supervision, followed by functional goals and diagnosis relevance. When conditions overlap, the more restrictive safety rule takes priority.
+
+The app explains its overall selection approach and lists reasons for excluding particular movements. For example, an exercise requiring support is removed if that support is unavailable.
+
+Free-text notes are stored for reference. The system does not interpret those notes as clinical instructions or combine disease-specific lists into a medical prescription.
+
+SLIDE 8 — Goals for Daily Life
+
+We linked exercises to meaningful daily activities. Sit-to-stand relates to chair and toilet transfers. Supported balance relates to standing tasks and mobility. Gentle grasp-and-release relates to handling everyday objects.
+
+Users choose a functional goal and record how difficult that activity feels. This makes the purpose of exercise visible and provides a topic for discussion with a clinician.
+
+Changes in these ratings remain self-reported. They do not replace standardised functional testing or demonstrate recovery on their own.
+
+SLIDE 9 — Exercise Library
+
+The library contains 30 exercises across strength, balance, flexibility, mobility, endurance, breathing and daily function. Users can search or filter by condition, category and position.
+
+We separate the personalised starting selection from the full educational library. This lets users explore information while keeping the suggested plan subject to safety rules.
+
+Each exercise has three schematic teaching panels, giving 90 panels in total. These support the written steps; they are not professional videos or biomechanically validated demonstrations.
+
+SLIDE 10 — What an Exercise Card Shows
+
+An exercise card explains the purpose of the movement, how it relates to daily life, how to perform it, and what precautions to consider. It also includes breathing guidance, common mistakes and an easier option.
+
+For seated ankle pumps, the instructions show the starting position and controlled ankle movements. The practical purpose is to support foot positioning and preparation for movement.
+
+We included these details so users can understand the task rather than simply see a name and repetition count.
+
+SLIDE 11 — FITT for Seated Ankle Pumps
+
+We used FITT—Frequency, Intensity, Time and Type—to structure the exercise information.
+
+For ankle pumps, the example frequency is daily when appropriate. The intensity guidance is a comfortable, pain-free range. The starting volume is five slow repetitions per foot, and the type is seated mobility.
+
+Repetitions describe volume rather than a measured duration. These values are teaching examples, not an individual prescription. A clinician’s plan takes priority over the sample dose shown in the card.
+
+SLIDE 12 — Making Exercises Easier or Harder
+
+Exercises include regression and progression information. A smaller movement range, fewer repetitions or more support may make a task easier. Increasing the challenge requires professional assessment.
+
+Users can transcribe a plan supplied by their clinician and record their actual repetitions, duration and symptoms. This entry is user-reported; it is not a digitally verified prescription.
+
+The app does not automatically increase the load after a completion tick. We wanted to support an individual plan without assuming that completion proves readiness to progress.
+
+SLIDE 13 — Daily Health Records
+
+Daily records include medication times, water intake, steps, pain, fatigue and difficulty with the chosen functional activity. Selected diagnoses also reveal relevant fields such as blood glucose, blood pressure or breathlessness.
+
+Medication times come from the user’s existing prescription. The app does not change doses, calculate replacement doses or provide an individual missed-dose plan. Water targets are user-set and should follow professional advice, particularly with fluid restrictions.
+
+These records support organisation and discussion; they are not automated treatment decisions.
+
+SLIDE 14 — Progress and Clinician Summary
+
+Users can review seven, thirty or ninety days, or choose a date range. The report brings together recorded exercise activity, symptoms and functional difficulty.
+
+Missing data stays missing. An unrecorded day is not counted as zero pain or treatment failure. Planned exercise days apply from the date they are saved, so we do not invent a past schedule.
+
+A printable summary can be saved as a PDF. Users decide whether to include their medication list and whom to share it with.
+
+SLIDE 15 — Using the App
+
+For older users, the interface needs to be readable and predictable. We used large text, generous touch areas, simple Turkish and six main navigation sections. Safety messages use words as well as colour.
+
+Exercise steps have illustrations, and supported browsers can read them aloud. The prominent cloud-shaped helper offers a visible place to ask for guidance.
+
+These are accessibility design choices. We still need older adults to test whether the instructions, controls and warnings are understandable in practice.
+
+SLIDE 16 — Help and Peer Support
+
+İyi Dost helps users find their way around the app. When signed in and online, it uses the gte-small embedding model to match questions with prepared help topics. Offline or as a guest, the prepared guide remains available. It does not generate medical advice.
+
+Registered users can also share experiences under nicknames in support groups. They can delete their own posts, report content and block other users. Diagnoses are not automatically published, and reporting does not guarantee immediate human review.
+
+SLIDE 17 — Using the App Offline
+
+The app opens in a browser and can be added to the home screen on supported devices. Once initial online preparation is complete, cached screens and local records can reopen offline. Shared messages, cloud synchronisation and the model-assisted helper require internet access.
+
+Manual step entry is always available. The optional phone-motion estimate is experimental and works only in the foreground. Push reminders also depend on permission, connectivity, installation where required, and device support. A notification does not prove that medication was taken.
+
+SLIDE 18 — Accounts and Health Records
+
+Users can stay as guests or create a username-and-password account. A recovery code is shown once and should be stored privately.
+
+Health-record upload requires a separate, explicit choice. We keep guest and account records separate and use server-side access rules to restrict each user to their own health data. Conflicting changes from two devices are flagged instead of silently overwritten.
+
+These controls were technically tested, but they do not establish independent security certification or regulatory approval.
+
+SLIDE 19 — Guidelines Behind the Design
+
+We used a targeted review of guidelines and professional recommendations, including WHO, NICE and condition-specific sources. This was not a systematic review.
+
+WHO informed the combination of strength, balance and aerobic activity. NICE osteoarthritis guidance informed tailored strengthening and aerobic options. Stroke and falls guidance reinforced assessment, supervision and functional goals.
+
+We connected references to the relevant exercise content and design rules. Guidance supports the rationale, while the app’s own rules and illustrations still require evaluation.
+
+SLIDE 20 — Live Demo: Starting a Plan
+
+[ON SCREEN — NOT SPOKEN] Use a fictional guest profile prepared in advance. Select osteoarthritis and type 2 diabetes, choose the chair-rise goal, complete movement and support information, then show the daily check and one card. Do not enter real patient information.
+
+Let’s follow an example user with knee osteoarthritis and type 2 diabetes. Their goal is to get up from a chair more comfortably.
+
+Here, we record movement level, support needs and reported professional clearance, then complete the day’s safety check.
+
+The app now shows its starting selection and the reasoning behind it. Opening a card brings together the movement steps, daily-life purpose and precautions. This demonstrates how profile information becomes an explainable exercise pathway.
+
+SLIDE 21 — Live Demo: When the Plan Locks
+
+[ON SCREEN — NOT SPOKEN] Select the active diabetic foot-wound checkbox and save. Show the personalised plan’s lock message and exclusion reasons. Keep this distinction clear: the full library remains educationally browsable.
+
+Now we add an active diabetic foot ulcer to the same profile. The suggested plan locks and directs the user to professional assessment. Standing and walking options are also removed from the personalised starting plan.
+
+The full educational library remains browsable; seeing a movement there does not mean it is suitable to perform.
+
+This is the key point of the demonstration: a new complication can limit an otherwise relevant exercise option. Safety restrictions take priority over the functional goal.
+
+SLIDE 22 — Assessment Rubric
+
+We mapped the project to all ten rubric criteria. Clinical relevance, safety and personalisation each carry 15 points. The library, functional focus, accessibility and progress tracking each carry 10. Technical reliability, evidence-informed design and presentation carry 5 each.
+
+Our response is visible in the user journey: a geriatric profile, daily screening, explained exercise selection, instructional cards and follow-up records. The aim is to show how each requirement shaped a concrete feature, while acknowledging where further evaluation is needed.
+
+SLIDE 23 — What We Tested and What Comes Next
+
+Technical checks covered safety rules, account separation, consent-based cloud storage, shared messages, record conflicts and offline access. We also tested model requests and server scheduling.
+
+These checks do not establish clinical effectiveness or reliable delivery on every phone. Physical-device notification and motion-estimate testing remains necessary.
+
+The next human evaluation must include professional review of exercise content and combined-diagnosis rules, followed by usability work with older adults. We prepared a protocol, but these evaluations have not yet been completed.
+
+SLIDE 24 — References and Live App
+
+The references and live application link are shown here. The sources provide the clinical framework; the demonstration shows how we translated that framework into software.
+
+İyiAdım brings together exercise information, safety screening, functional goals, daily records and accessible support. Its contribution at this stage is a working, guideline-informed educational prototype.
+
+Our next step is to evaluate the content and usability with the professionals and older adults it is intended to support. Thank you for listening. We welcome your questions.
+
+APPENDIX A — RUBRIC MAP (NOT SPOKEN)
+
+Clinical relevance — 15 points: Common geriatric conditions, multiple exercise domains and meaningful functional goals.
+
+Safety and screening — 15 points: Daily red-flag check, complication restrictions, supervision requirements and escalation messages.
+
+Personalisation — 15 points: Condition, functional level, goal, symptoms and support change the selection; user-transcribed individual plan.
+
+Exercise library — 10 points: 30 cards; three teaching panels each; instructions, FITT information, precautions and adaptations.
+
+Functional focus — 10 points: Links to transfers, walking, standing tasks and object handling; self-reported goal difficulty.
+
+UX and accessibility — 10 points: Readable controls, simple Turkish, written warnings, optional audio and visible helper.
+
+Progress tracking — 10 points: Recorded activity, symptom trends, planned-day record coverage and printable summaries.
+
+Technical reliability — 5 points: Persistent records, account separation, explicit cloud consent, conflict handling and offline shell.
+
+Evidence-informed design — 5 points: Guideline references linked to exercise content and selection principles; limits are stated.
+
+Presentation — 5 points: Clear rationale, fictional user journey, live safety scenario and accurate limitations.
+
+APPENDIX B — POSSIBLE QUESTIONS (NOT SPOKEN)
+
+1. Does choosing a diagnosis produce a clinical prescription?
+No. It helps organise educational options. Functional level, complications, symptoms and support also matter. The app does not replace professional assessment or calculate a clinically validated individual dose.
+
+2. Why did you use symptom scores of four and seven?
+We used them as conservative prototype rules to demonstrate adaptation and stopping. They are not established universal thresholds. Professional review could change or replace them before clinical use.
+
+3. Is the assistant a medical chatbot?
+No. Signed-in online use adds a semantic matching model that selects prepared application-help topics. The assistant does not generate a diagnosis, medication dose or rehabilitation prescription.
+
+4. Does the app prove that a user is improving?
+No. It displays entered records and changes in self-reported difficulty. Missing data, technique and actual adherence cannot be established from completion ticks. Clinical outcomes require separate evaluation.
+
+5. What are the most important next steps?
+Professional content review, older-adult usability testing and physical-device checks. For wider patient use, data governance, security and institutional requirements also need evaluation.
+
+6. Why use this instead of an exercise video?
+We combine movement information with daily screening, personal goals, reasons for restrictions and follow-up records. Whether that combination improves outcomes is a question for future evaluation.
+
+APPENDIX C — REFERENCES (NOT SPOKEN)
+
+1. World Health Organization (2020). WHO Guidelines on Physical Activity and Sedentary Behaviour.
+https://www.who.int/publications/i/item/9789240015128
+
+2. NICE (2022). Osteoarthritis in over 16s: diagnosis and management. NG226.
+https://www.nice.org.uk/guidance/ng226/chapter/Recommendations
+
+3. Brooke-Wavell, K., et al. (2022). Strong, steady and straight: UK consensus statement on physical activity and exercise for osteoporosis. British Journal of Sports Medicine, 56, 837–846. DOI: 10.1136/bjsports-2021-104634.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9304091/
+
+4. Parkinson’s Foundation / American College of Sports Medicine (2025). Parkinson’s Exercise Guidelines for Exercise Professionals.
+https://www.parkinson.org/sites/default/files/documents/Parkinsons-Exercise-Guidelines-1025.pdf
+
+5. NICE (2023). Stroke rehabilitation in adults. NG236.
+https://www.nice.org.uk/guidance/ng236/chapter/Recommendations
+
+6. American Diabetes Association (2026). Standards of Care in Diabetes—2026. Section 5: Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes. DOI: 10.2337/dc26-S005.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12690188/
+
+7. AHA / ACC / HFSA (2022). Guideline for the Management of Heart Failure. DOI: 10.1016/j.jacc.2021.12.012.
+https://doi.org/10.1016/j.jacc.2021.12.012
+
+8. American Heart Association (n.d.). Getting Active to Control High Blood Pressure.
+https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/getting-active-to-control-high-blood-pressure
+
+9. American Thoracic Society (2023). Pulmonary Rehabilitation for Adults with Chronic Respiratory Disease: An Official ATS Clinical Practice Guideline. DOI: 10.1164/rccm.202306-1066ST.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10449064/
+
+10. Dent, E., et al. (2019). Physical Frailty: ICFSR International Clinical Practice Guidelines for Identification and Management. DOI: 10.1007/s12603-019-1273-z.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6800406/
+
+11. NICE (2025). Falls: assessment and prevention in older people and in people 50 and over at higher risk. NG249.
+https://www.nice.org.uk/guidance/ng249/chapter/Recommendations
+
+12. NHS (n.d.). Sitting exercises. Practical exercise-instruction resource used alongside the clinical guidelines.
+https://www.nhs.uk/live-well/exercise/sitting-exercises/
+
+Project source: https://github.com/Fizyoappa/-yiad-m
+The clinical review protocol is prepared; clinician review and older-adult usability studies have not been completed.
